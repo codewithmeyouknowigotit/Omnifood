@@ -132,6 +132,42 @@ priority*/
 }
 
 /*********************************/
+/* FEATURED IN SECTION*/
+/*********************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #999;
+}
+
+.logos {
+  display: flex;
+  /* justify-content: space-between can be used but instead currently using space-around
+  as it adds spacing block in the begining of the first logo and at the end of the last logo*/
+  justify-content: space-around;
+}
+
+.logos img {
+  /* Using height to style them instead of width because it appears more natural */
+  height: 3.2rem;
+
+  /* for graysacle() use values between 0 - 1 or 0% - 100% */
+  /* filter: grayscale(100%); */
+
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/*********************************/
 /* HOW IT WORKS SECTION*/
 /*********************************/
 .section-how {
