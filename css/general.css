@@ -1,0 +1,224 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+   
+--- 02 COLORS
+
+- Primary: 
+#e67e22
+
+- Tints: 
+#fdf2e9
+
+- Shades:
+#cf711f
+
+- Accents:
+- Greys:
+#555
+#333
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* Global settings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size settings */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/* .test { */
+/* background-color: orangered; */
+/* padding: 100px; */
+/* width: 1000px; */
+
+/* max-width: if the container width is larger than the specified max-width
+  then the width of the element is equal to the value that was specified for
+  max-width. However if the container width is less than the specified max-width
+  then the width of the element will be 100%*/
+/* max-width: 1000px; */
+
+/* 1 rem = 16px therefore 50 rem will be 16*50=800px */
+/* max-width: 50rem; */
+/* color: white; */
+/* padding will now be 64px */
+/* padding: 4rem; */
+/* the font-size will now be 32px */
+/* font-size: 2rem; */
+
+/* Now before the html font-size was set to 10px. The rem will now be
+  multiplied by 10px instead of the default 16px for everywhere you use
+  rem */
+/* } */
+
+/*********************************/
+/* GENERAL  REUSABLE COMPONENTS */
+/*********************************/
+
+.container {
+  /* 1140px is another convention that can be used */
+  /* but going with 120rem for this page */
+  /* If the viewport is smaller than 120rem then the container will start to shrink  */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  /* the distance is so small, im not even using rem */
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  /* since the span is an inline element, we'll change it to block right away */
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf7111;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 2rem;
+  /* In order for the padding to work as expected, 
+  we need to make it an inline block so that the box model applies as usual*/
+  /* for the padding i'm making the side double the top and bottom */
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Adding animation for the button when it hovers */
+  /* Set to all because we want to animation the background-color and the color */
+  /* Always put the transition in the original state for the link which is here and not in seudo hover */
+  transition: all 0.3s;
+
+  /* Also you can specific just one keywork like */
+  /* transition: background-color 0.5s; */
+}
+
+/* Gotta add al the seudo classes */
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+
+  /* This wont work well. It makes the content above jump.
+  So we need to add the border inside the button */
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
+  /* inset keyword will add the shadow inside the button */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* Instead of adding a margin in the btn--full, we create a helper class if you really want to add a styles to a class and not others. to ensure that, you have to add the !important keyword. Good practice to do */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
