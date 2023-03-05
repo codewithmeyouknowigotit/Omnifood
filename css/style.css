@@ -247,6 +247,17 @@ priority*/
   Created a new div for the content. Named it .meal-content and added the padding
   just below. Now it looks amazing */
   /* padding: 4.8rem; */
+
+  /* Adds animation */
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  /* To add animation, the transition keyword needs to be added to the original state of .meals */
+
+  /* Adds shadow while in transition */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
@@ -313,4 +324,31 @@ priority*/
 
 .meal-img {
   width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.list {
+  list-style: none;
+  /* This flexbox trick is to create space between each list-item
+  instead of using a margin-bottom or margin-top*/
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }
