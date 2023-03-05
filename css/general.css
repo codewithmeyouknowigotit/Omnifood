@@ -34,6 +34,7 @@ Paragraph default: 1.6
 
 - Accents:
 - Greys:
+#6f6f6f (Lightest grey allowed on #fdf2e9
 #555
 #333
 
@@ -241,7 +242,9 @@ body {
   border-bottom: 1px solid transparent;
 }
 
+/*********************************/
 /* HELPER/SETTING CLASSES */
+/*********************************/
 
 /* Instead of adding a margin in the btn--full, we create a helper class if you really want to add a styles to a class and not others. to ensure that, you have to add the !important keyword. Good practice to do */
 .margin-right-sm {
