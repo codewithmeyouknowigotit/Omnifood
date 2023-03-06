@@ -242,6 +242,28 @@ body {
   border-bottom: 1px solid transparent;
 }
 
+.list {
+  list-style: none;
+  /* This flexbox trick is to create space between each list-item
+  instead of using a margin-bottom or margin-top*/
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
 /*********************************/
 /* HELPER/SETTING CLASSES */
 /*********************************/
