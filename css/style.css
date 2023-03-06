@@ -404,6 +404,48 @@ outside their parent element.  */
   padding: 9.6rem 0;
 }
 
+.pricing-plan {
+  /* background-color: #fdf2e9; */
+  border-radius: 11px;
+  /* This padding has 2 extra pixels for the starter plan since adding the
+  2px solid border. So to compensate, its been added to the .pricing-plan-starter
+  and the pricing-plan--complete */
+  /* padding: 4.8rem; */
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  /* Use justify-self when you want to move one specific grid element/item.
+  Place it in element you'd like to move. Moved this element to the end to fill in the
+  middle space */
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Adding Best Value to the complete meal plan */
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
 .plan-header {
   text-align: center;
   margin-bottom: 4.8rem;
