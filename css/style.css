@@ -591,7 +591,16 @@ outside their parent element.  */
   color: #aaa;
 }
 
+/* Makes the focus in the form white */
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/*********************************/
+/* FOOTER SECTION*/
+/*********************************/
+
+.section-footer {
+  padding: 9.6rem 0;
 }
